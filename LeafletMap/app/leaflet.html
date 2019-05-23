@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />   
+    
+
+</head>
+<body>
     <link href="lib/Leaflet-1.5.1/dist/leaflet.css" rel="stylesheet" />
     <script src="lib/Leaflet-1.5.1/dist/leaflet.js"></script>
     <style>
@@ -21,10 +25,6 @@
             height: 100%;
         }
     </style>
-
-
-</head>
-<body>
 
     <div id='map'></div>
 
@@ -47,8 +47,8 @@
             }
         });
 
-        var Icon1 = new LeafIcon({ iconUrl: 'check-in-icon/check-in-blue1.png' })
-        var Icon2 = new LeafIcon({ iconUrl: 'check-in-icon/check-in-red.png' })
+        var Icon1 = new LeafIcon({ iconUrl: 'lib/Leaflet-1.5.1/dist/images/check-in-blue.png' })
+        var Icon2 = new LeafIcon({ iconUrl: 'lib/Leaflet-1.5.1/dist/images/check-in-red.png' })
         L.marker([10.795190, 106.677770], { icon: Icon1 }).bindPopup("Thiết bị A.").addTo(map);
         L.marker([10.765100, 106.632200], { icon: Icon2 }).bindPopup("Thiết bị B.").addTo(map);
 
