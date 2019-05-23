@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Custom Icons Tutorial - Leaflet</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div id='map'></div>
+
+    <script>
+        //var map = L.map('map').setView([51.5, -0.09], 13);
+        var map = L.map('map').setView([16, 108], 6);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var LeafIcon = L.Icon.extend({
+            options: {
+                //shadowUrl: 'check-in-icon/9212016103712AMw.png',
+                iconSize: [38, 95],
+                shadowSize: [50, 64],
+                iconAnchor: [22, 94],
+                shadowAnchor: [4, 62],
+                popupAnchor: [-3, -76]
+            }
+        });
+
+        var Icon1 = new LeafIcon({ iconUrl: 'check-in-icon/check-in-blue1.png' })
+        var Icon2 = new LeafIcon({ iconUrl: 'check-in-icon/check-in-red.png' })
+        L.marker([10.795190, 106.677770], { icon: Icon1 }).bindPopup("Thiết bị A.").addTo(map);
+        L.marker([10.765100, 106.632200], { icon: Icon2 }).bindPopup("Thiết bị B.").addTo(map);
+
+    </script>
+
+
+
+</body>
+</html>
