@@ -133,9 +133,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\check-in-icon\check-in-blue.png" />
-    <Content Include="app\check-in-icon\check-in-blue1.png" />
-    <Content Include="app\check-in-icon\check-in-red.png" />
+    <Content Include="app\lib\Leaflet-1.5.1\dist\images\check-in-blue.png" />
+    <Content Include="app\lib\Leaflet-1.5.1\dist\images\check-in-red.png" />
     <Content Include="app\leaf-green.jpg" />
     <Content Include="app\leaflet.html" />
     <Content Include="app\lib\Leaflet-1.5.1\build\docs.js" />
